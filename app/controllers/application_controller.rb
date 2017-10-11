@@ -1,5 +1,14 @@
 class ApplicationController < ActionController::API
 
+  
+#-----  from gabi:
+
+  # if saving stuff on the rails application you should look for `dotenv-rails`  
+  # you create an `.env` file and put environment variables there, 
+  # when you deploy a server you pass the secrets, 
+  # database passwords in the end all with environment variables. 
+  # also tell `.gitignore` to ignore `.env` files (edited)
+
 	def encode_token(payload)
     token = JWT.encode(payload, "flobble")
   end
