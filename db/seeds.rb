@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+users = User.create([
+	{username: "neil176", password: "password", email: "n@n.com"},
+	{username: "other", password: "password", email: "o@nocom"}
+])
+
+follows = Follow.create([
+	{follower: User.all[0], followee: User.all[1]}
+])
+	
