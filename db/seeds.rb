@@ -15,4 +15,8 @@ users = User.create([
 follows = Follow.create([
 	{follower: User.all[0], followee: User.all[1]}
 ])
+
+projects = Project.create([
+	{title: "my first project", user_id: 1}
+])
 	

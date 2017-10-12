@@ -1,8 +1,17 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
   resources :users, :projects, :tags, :items, :follows
 
-  # NEED A LOGIN ROUTE TO DIRECT TO AUTH#CREATE
+	# NEED A LOGIN ROUTE TO DIRECT TO AUTH#CREATE
+  post '/login', to: 'auth#create'
+
+  
+  get '/currentuser', to: 'users#current' # replaces => # get '/welcome', to: "application#welcome"
+  
+
+  # an equivalent for this will be needed => # patch '/update', to: "api/v1/users#update"
+
+	
 
 
 end

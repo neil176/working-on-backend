@@ -1,5 +1,11 @@
 class UsersController < ApplicationController
 	# signup
+
+  # def index
+  #   @users = User.all
+  #   render json: @users
+  # end
+
   def create
     @user = User.new(user_params)
     if @user.save
@@ -23,7 +29,15 @@ class UsersController < ApplicationController
 # this will be the user's homepage ?
   def show
     @user = User.find(params[:id])
-    render json: {user: @user}
+    render json: @user
+  end
+
+  def current # this should redirect ?
+    if logged_in?
+      render json: @user
+    else
+      render json: {message: "Please log in"}
+    end
   end
 
   private
