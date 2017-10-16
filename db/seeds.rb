@@ -19,4 +19,8 @@ follows = Follow.create([
 projects = Project.create([
 	{title: "my first project", user_id: 1}
 ])
+
+items = Item.create([
+	{description: "item number one", project_id: 1}
+])
 	

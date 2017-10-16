@@ -1,6 +1,7 @@
 class UserSerializer < ActiveModel::Serializer
   attributes :id, :username, :email
-  has_many :projects
+
+  has_many :projects#, serializer: ProjectSerializer
   
   has_many :follows, foreign_key: "follower_id"
 	has_many :followees, through: :follows

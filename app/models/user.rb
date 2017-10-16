@@ -2,7 +2,9 @@ class User < ApplicationRecord
 	has_secure_password
 	has_many :projects
 
-	#------------------------ fix this
+  has_many :items, through: :projects
+
+
 	has_many :follows, foreign_key: "follower_id"
 	has_many :followees, through: :follows
 
