@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :username, :email
+  attributes :id, :username, :email, :picture
 
   has_many :projects#, serializer: ProjectSerializer
   

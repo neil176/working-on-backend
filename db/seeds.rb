@@ -9,10 +9,10 @@
 puts "Seeding the database...."
 
 users = User.create([
-	{username: "neil176", password: "password", email: "n@n.com"},
-	{username: "other_guy", password: "password", email: "o@n.com"},
-	{username: "third_person", password: "password", email: "3@3.com"},
-	{username: "fourth_person", password: "password", email: "4@4.com"},
+	{username: "neil176", password: "password", email: "n@n.com", picture: "https://heavyeditorial.files.wordpress.com/2017/09/screen-shot-2017-09-11-at-3-04-44-am-e1505117117252.jpg?quality=65&strip=all&w=782"},
+	{username: "other_guy", password: "password", email: "o@n.com", picture: "https://heavyeditorial.files.wordpress.com/2017/09/screen-shot-2017-09-11-at-3-04-44-am-e1505117117252.jpg?quality=65&strip=all&w=782"},
+	{username: "third_person", password: "password", email: "3@3.com", picture: "https://heavyeditorial.files.wordpress.com/2017/09/screen-shot-2017-09-11-at-3-04-44-am-e1505117117252.jpg?quality=65&strip=all&w=782"},
+	{username: "fourth_person", password: "password", email: "4@4.com", picture: "https://heavyeditorial.files.wordpress.com/2017/09/screen-shot-2017-09-11-at-3-04-44-am-e1505117117252.jpg?quality=65&strip=all&w=782"},
 
 ])
 
