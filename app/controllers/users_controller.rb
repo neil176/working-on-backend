@@ -1,11 +1,12 @@
 class UsersController < ApplicationController
-	# signup
 
-  # def index
-  #   @users = User.all
-  #   render json: @users
-  # end
+  def index
+    @users = User.all
+    render json: @users
+  end
 
+
+# signup
   def create
     @user = User.new(user_params)
     if @user.save
@@ -38,6 +39,12 @@ class UsersController < ApplicationController
     else
       render json: {message: "Please log in"}
     end
+  end
+
+  def feed
+    @user = current_user
+    @followees = @user.followees
+    render json: @followees
   end
 
   private

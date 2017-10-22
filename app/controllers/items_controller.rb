@@ -10,7 +10,7 @@ class ItemsController < ApplicationController
 	private
 
 	def item_params
-		params.permit(item:[:description, :image, :project_id])
+		params.permit(item:[:description, :image, :project_id, :core])
 	end
 
 end
