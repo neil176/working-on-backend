@@ -42,6 +42,26 @@ projects = Project.create([
 
 ])
 
+tags = Tag.create([
+	{text: "tag1"},
+	{text: "tag2"},
+	{text: "tag3"},
+	{text: "tag4"},
+	{text: "tag5"},
+	{text: "tag6"},
+
+])
+
+project_tags = ProjectTag.create([
+	{project_id: 1, tag_id: 1},
+	{project_id: 1, tag_id: 2},
+	{project_id: 2, tag_id: 2},
+	{project_id: 2, tag_id: 3},
+	{project_id: 2, tag_id: 4},
+	{project_id: 3, tag_id: 4},
+
+])
+
 items = Item.create([
 	{description: "item number one", project_id: 1, image: "https://i.imgur.com/UL8gyZi.jpg?1", core: false},
 	{description: "item number 2", project_id: 1, image: "https://i.imgur.com/UL8gyZi.jpg?1", core: true},
