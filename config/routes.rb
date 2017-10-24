@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   
   get '/currentuser', to: 'users#current' # replaces => # get '/welcome', to: "application#welcome"
   get '/feed', to: 'users#feed'
+  get '/search', to: 'projects#search'
   
 
   # an equivalent for this will be needed => # patch '/update', to: "api/v1/users#update"

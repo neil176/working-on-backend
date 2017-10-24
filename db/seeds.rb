@@ -13,6 +13,7 @@ users = User.create([
 	{username: "other_guy", password: "password", email: "o@n.com", picture: "https://heavyeditorial.files.wordpress.com/2017/09/screen-shot-2017-09-11-at-3-04-44-am-e1505117117252.jpg?quality=65&strip=all&w=782"},
 	{username: "third_person", password: "password", email: "3@3.com", picture: "https://heavyeditorial.files.wordpress.com/2017/09/screen-shot-2017-09-11-at-3-04-44-am-e1505117117252.jpg?quality=65&strip=all&w=782"},
 	{username: "fourth_person", password: "password", email: "4@4.com", picture: "https://heavyeditorial.files.wordpress.com/2017/09/screen-shot-2017-09-11-at-3-04-44-am-e1505117117252.jpg?quality=65&strip=all&w=782"},
+	{username: "mister 5", password: "password", email: "5@4.com", picture: "https://heavyeditorial.files.wordpress.com/2017/09/screen-shot-2017-09-11-at-3-04-44-am-e1505117117252.jpg?quality=65&strip=all&w=782"},
 
 ])
 
@@ -40,6 +41,10 @@ projects = Project.create([
 	{title: "user3's second project", user_id: 3},
 	{title: "user3's third project", user_id: 3},
 
+	{title: "mister five's first project", user_id: 5},
+	{title: "mister five's second project", user_id: 5},
+	{title: "mister five's third project", user_id: 5},
+
 ])
 
 tags = Tag.create([
@@ -49,6 +54,8 @@ tags = Tag.create([
 	{text: "tag4"},
 	{text: "tag5"},
 	{text: "tag6"},
+	{text: "mr. 5"},
+	{text: "mr. 6"},
 
 ])
 
@@ -59,6 +66,12 @@ project_tags = ProjectTag.create([
 	{project_id: 2, tag_id: 3},
 	{project_id: 2, tag_id: 4},
 	{project_id: 3, tag_id: 4},
+	{project_id: 4, tag_id: 4},
+	{project_id: 5, tag_id: 5},
+	{project_id: 6, tag_id: 6},
+	{project_id: 7, tag_id: 5},
+	{project_id: 10, tag_id: 7},
+	{project_id: 8, tag_id: 6},
 
 ])
 
@@ -83,6 +96,9 @@ items = Item.create([
 	{description: "item number 18", project_id: 8, image: "https://i.imgur.com/UL8gyZi.jpg?1", core: false},
 	{description: "item number 19", project_id: 9, image: "https://i.imgur.com/UL8gyZi.jpg?1", core: true},
 	{description: "item number 20", project_id: 1, image: "https://i.imgur.com/UL8gyZi.jpg?1", core: true},
+	{description: "item number 21", project_id: 10, image: "https://i.imgur.com/UL8gyZi.jpg?1", core: true},
+	{description: "item number 22", project_id: 10, image: "https://i.imgur.com/UL8gyZi.jpg?1", core: false},
+	{description: "item number 23", project_id: 10, image: "https://i.imgur.com/UL8gyZi.jpg?1", core: true},
 
 ])
 

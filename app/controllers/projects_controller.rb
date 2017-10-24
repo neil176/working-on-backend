@@ -14,6 +14,19 @@ class ProjectsController < ApplicationController
 		end
 	end
 
+	def search
+		@projects = Project.all.select do |project|
+			project.tags.any? do |tag|
+				if tag.text.include?(search_params[:query])
+					true
+				else
+					false
+				end
+			end
+		end
+		render json: @projects
+	end
+
 	private
 
 	def project_params
@@ -22,6 +35,10 @@ class ProjectsController < ApplicationController
 
 	def tag_params
 		params.permit(tags:[:text])
+	end
+
+	def search_params
+		params.permit(:query)
 	end
 
 	
